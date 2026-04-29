@@ -6,6 +6,9 @@ on:
       - 'SOARfeedURL.txt'  # Trigger when SOARfeedURL.txt is modified
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   generate_md5:
     runs-on: ubuntu-latest
