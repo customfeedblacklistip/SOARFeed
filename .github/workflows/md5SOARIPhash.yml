@@ -21,7 +21,7 @@ jobs:
 
       - name: Generate MD5 Hash
         run: |
-          echo "Calculating MD5 Hash for blocklist.txt..."
+          echo "Calculating MD5 Hash for SOARfeedIP"
           md5sum SOARfeedIP.txt | cut -d ' ' -f1 | tee md5outputSOARIP.txt
           echo "MD5 Hash saved to md5outputSOARIP.txt."
 
