@@ -21,7 +21,7 @@ jobs:
 
       - name: Generate MD5 Hash
         run: |
-          echo "Calculating MD5 Hash for blocklist.txt..."
+          echo "Calculating MD5 Hash for SOARfeedURL"
           md5sum SOARfeedURL.txt | cut -d ' ' -f1 | tee md5outputSOARURL.txt
           echo "MD5 Hash saved to md5outputSOARURL.txt"
 
@@ -34,7 +34,7 @@ jobs:
           git add md5outputSOARURL.txt
           
           # Commit the changes
-          git commit -m "Add generated MD5 hash for SOARfeedIP.txt"
+          git commit -m "Add generated MD5 hash for SOARfeedURL.txt"
           
           # Push the changes back to the repository
           git push
